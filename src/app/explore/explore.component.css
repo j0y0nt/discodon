@@ -1,0 +1,94 @@
+.main {
+    display: flex;
+    flex-direction: row;  
+  }
+  
+  section {
+      display: flex;
+      justify-content: center;
+      margin: 10px 10px 10px 10px;
+  }
+  
+  article {
+      padding: 10px 10px 10px 10px;
+  }
+  
+  .about {
+      width: 285px;
+  }
+  
+  .about-img {
+      width: 100%;
+  }
+  .feed {
+      overflow: scroll;
+      overflow-x: hidden; 
+      max-height: 100vh;
+  }
+  
+  .column-link {
+      align-items: center;
+      background: transparent;
+      border: 0;
+      border-left: 4px solid transparent;
+      color: #ddd9e8;
+      display: flex;
+      font-size: 16px;
+      gap: 5px;
+      overflow: hidden;
+      padding: 13px;
+      -webkit-text-decoration: none;
+      text-decoration: none;
+      white-space: nowrap;
+  }
+  
+  .column-link.active {
+      color: #8c8dff;
+  }
+  
+  .icon {
+      aspect-ratio: 1;
+      flex: 0 0 auto;
+      height: 24px;
+      width: 24px;
+  }
+  
+  .icon path {
+      fill: currentColor;
+  }
+  
+  .action-panel {
+      width: 285px;
+  }
+  
+  .panel-main {
+      max-width: 600px;
+  }
+  
+  button {
+      width: 100%;
+      border: 1;
+      background: transparent;
+      background-color: #563acc;
+  }
+  
+  .example-button-row.login-button {
+      color: #fff;
+      margin-top: 10px;
+  }
+  
+  .signin-panel {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      height: 100%;
+      padding: 10px;
+  }
+  
+  .login-btn {
+      color: #fff !important;
+  }
+  
+  .signup-link {
+      width: 100%;
+  }

@@ -1,0 +1,96 @@
+<div class="signup-panel">
+    <div class="signup-content">
+        <div class="form-container">
+            <mat-stepper labelPosition="bottom" [linear]="isLinear" #stepper>
+                <mat-step [stepControl]="firstFormGroup">
+                  <div class="simple-form">
+                    <form [formGroup]="firstFormGroup">
+                        <h1 class="title">Some ground rules.</h1>
+                        <p class="lead">These are set and enforced by the mastodon.social moderators.</p>
+                        <ol class="rules-list">
+                            <li>
+                            <div class="rules-list__text">Sexually explicit or violent media must be marked as sensitive or with a content warning</div>
+                            <div class="rules-list__hint">This includes content that is particularly provocative even if it may not show specific body parts, as well as dead bodies, bloody injuries, and other gore. Particularly obscene content may be prohibited entirely. Profile pictures and header images may not contain sexually explicit or violent media.</div>
+                            </li>
+                            <li>
+                            <div class="rules-list__text">No racism, sexism, homophobia, transphobia, ableism, xenophobia, or casteism.</div>
+                            <div class="rules-list__hint">Transphobic behavior such as intentional misgendering and deadnaming is strictly prohibited. Promotion of "conversion therapy" is strictly prohibited. Criticism of governments and religions is permissible unless being used as a proxy for discrimination.</div>
+                            </li>
+                            <li>
+                            <div class="rules-list__text">No incitement of violence or promotion of violent ideologies</div>
+                            <div class="rules-list__hint">Calling for people or groups to be assassinated, murdered, or attacked physically is strictly prohibited. Support for violent groups or events is prohibited.</div>
+                            </li>
+                            <li>
+                            <div class="rules-list__text">No harassment, block evasion, dogpiling, or doxxing of others</div>
+                            <div class="rules-list__hint">Repeat attempts to communicate with users who have blocked you or creation of accounts solely to harass or insult individuals is strictly prohibited. Coordinated activity to attack other users is prohibited. Posting of private personal information about others is prohibited.</div>
+                            </li>
+                            <li>
+                            <div class="rules-list__text">Do not share information widely-known to be false and misleading</div>
+                            <div class="rules-list__hint">False and misleading information and links from low-quality sources may not be posted, especially if they are likely to mislead or confuse others or endanger their safety.</div>
+                            </li>
+                            <li>
+                            <div class="rules-list__text">Content created by others must be attributed, and use of generative AI must be disclosed</div>
+                            <div class="rules-list__hint">Content created by others must clearly provide a reference to the author, creator, or source. For adult content, this should include performers. Accounts may not solely post AI-generated content.</div>
+                            </li>
+                            </ol>
+                        <ng-template matStepLabel ><div class="stepper-label">Accept rules</div></ng-template>
+                        <div class="stacked-actions">
+                          <button mat-button matStepperNext>Accept</button>
+                        </div>
+                      </form>
+                  </div>  
+                  
+                </mat-step>
+                <mat-step [stepControl]="secondFormGroup" label="Your details">
+                <div class="simple-form">
+                  <form [formGroup]="secondFormGroup">
+                    <h1 class="title">Let's get you set up on mastodon.social.</h1>
+                    <p class="lead">With an account on this Mastodon server, you'll be able to follow any other person on the network, regardless of where their account is hosted.</p>
+                    <mat-form-field class="user-info-form">
+                      <mat-label>Username</mat-label>
+                      <input matInput formControlName="Username" placeholder="Ex. 1 Main St, New York, NY"
+                             required>
+                    </mat-form-field>
+                    <mat-form-field class="user-info-form">
+                      <mat-label>E-mail address</mat-label>
+                      <input matInput formControlName="Email" type="email" placeholder="Ex. 1 Main St, New York, NY"
+                             required>
+                    </mat-form-field>
+                    <mat-form-field class="user-info-form">
+                      <mat-label>Password</mat-label>
+                      <input matInput formControlName="Password" placeholder="Ex. 1 Main St, New York, NY"
+                             required>
+                    </mat-form-field>
+                    <mat-form-field class="user-info-form">
+                      <mat-label>Confirm Password</mat-label>
+                      <input matInput formControlName="ConfirmPassword" placeholder="Ex. 1 Main St, New York, NY"
+                             required>
+                    </mat-form-field>
+                    <mat-checkbox class="tnc-agree"><p class="tnc-text">I have read and agree to the privacy policy * </p></mat-checkbox>
+                    <div class="stacked-actions">
+                      <button mat-button matStepperNext>Sign up</button>
+                      <button mat-button matStepperPrevious>Back</button>
+                    </div>
+                    <div class="form-footer">
+                      <ul class="no-list">
+                        <li>Log in</li>
+                        <li>Didn't receive a confirmation link?</li>
+                      </ul>
+                    </div>
+                  </form>
+                  </div>
+                </mat-step>
+                <mat-step>
+                  <ng-template matStepLabel>Confirm email</ng-template>
+                  <p>We have sent you an email with confirmation link. Checck your mail box. Click on button 
+                    to verufy it is you who trying to sign in.
+                  </p>
+                  <div>
+                    <button mat-button matStepperPrevious class="signup-form-button">Back</button>
+                    <button mat-button (click)="stepper.reset()" class="signup-form-button">Reset</button>
+                  </div>
+                </mat-step>
+              </mat-stepper>
+        </div>
+    </div>
+</div>
