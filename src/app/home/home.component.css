@@ -101,3 +101,7 @@
 .column-link {
     padding: 13px;;
 }
+
+.mat-divider {
+    border-top-color: #fff;
+}
